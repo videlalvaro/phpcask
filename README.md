@@ -12,7 +12,7 @@ Open the Terminal and type:
 
     > cd path/to/bitcask/ebin
     > erlc path/to/phpcask/php_cask.erl
-    > erl -sname phpcask
+    > erl -sname phpcask -pa ../deps/ebloom/ebin/
     
 Inside the erlang CLI:
     
