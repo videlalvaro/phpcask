@@ -4,15 +4,16 @@ PHPCask is client for the Bitcask K/V Store recently released by [Basho](http://
 
 On the PHP side it requires the [PHP Erlang Bridge Extension](http://code.google.com/p/mypeb/)
 
+You have to install the [Bitcask libraries](http://bitbucket.org/basho/bitcask) 
+
 Note that this client is *very* simple. It's aim is to showcase what can be done with the PHP Erlang Bridge Extension and with Bitcask from PHP.
 
 ## Running The Tests ##
 
 Open the Terminal and type:
 
-    > cd path/to/bitcask/ebin
-    > erlc path/to/phpcask/php_cask.erl
-    > erl -sname phpcask -pa ../deps/ebloom/ebin/
+    > cd path/to/phpcask
+    > erl -sname phpcask
     
 Inside the erlang CLI:
     
