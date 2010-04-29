@@ -1,0 +1,9 @@
+<?php
+
+require_once('./PHPCask.class.php');
+
+$phpcask = new PHPCask('phpcask@localhost', $argv[1]);
+var_dump($phpcask->put("foo", "bar"));
+var_dump($phpcask->get("foo"));
+var_dump($phpcask->delete("foo"));
+var_dump($phpcask->get("foo"));
