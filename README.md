@@ -23,7 +23,7 @@ Open another Terminal window and type:
     > cd path/to/phpcask/
     > php test.php erlang_cookie
     
-You can read the test.php file to see how does it works. 
+You can read the test.php file to see how does it work.
 
 *erlang_cookie* must be the value of the Erlang Cookie used by the node running Bitcask.
 
