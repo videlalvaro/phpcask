@@ -17,7 +17,7 @@ Open the Terminal and type:
     
 Inside the erlang CLI:
     
-    > php_cask:start().
+    > phpcask:start().
     
 Open another Terminal window and type:
 

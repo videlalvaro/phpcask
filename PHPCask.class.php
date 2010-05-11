@@ -16,28 +16,28 @@ class PHPCask
   public function put($key, $value)
   {
     $x = peb_encode("[~b, ~b]", array(array($key, $value)));
-    $result = peb_rpc("php_cask", "put", $x, $this->link);
+    $result = peb_rpc("phpcask", "put", $x, $this->link);
     return peb_decode($result);
   }
   
   public function get($key)
   {
     $x = peb_encode("[~b]", array(array($key)));
-    $result = peb_rpc("php_cask", "get", $x, $this->link);
+    $result = peb_rpc("phpcask", "get", $x, $this->link);
     return peb_decode($result);
   }
   
   public function delete($key)
   {
     $x = peb_encode("[~b]", array(array($key)));
-    $result = peb_rpc("php_cask", "delete", $x, $this->link);
+    $result = peb_rpc("phpcask", "delete", $x, $this->link);
     return peb_decode($result);
   }
   
   public function list_keys()
   {
     $x = peb_encode("[]", array(array()));
-    $result = peb_rpc("php_cask", "list_keys", $x, $this->link);
+    $result = peb_rpc("phpcask", "list_keys", $x, $this->link);
     return peb_decode($result);
   }
   
