@@ -1,4 +1,4 @@
--module(php_cask).
+-module(phpcask).
 
 -behaviour(gen_server).
 
