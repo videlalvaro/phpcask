@@ -67,7 +67,7 @@ terminate(_Reason, _State) -> ok.
 code_change(_OldVsn, State, _Extra) -> {ok, State}.
 
 get_dirname() ->
-  "./data".
+  "./priv/data".
 
 get_expiry_secs() ->
   900.
