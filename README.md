@@ -13,11 +13,7 @@ Note that this client is *very* simple. It's aim is to showcase what can be done
 Open the Terminal and type:
 
     > cd path/to/phpcask
-    > erl -sname phpcask
-    
-Inside the erlang CLI:
-    
-    > phpcask:start().
+    > ./start-dev.sh
     
 Open another Terminal window and type:
 
