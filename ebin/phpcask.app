@@ -5,9 +5,10 @@
   {modules, [
              phpcask,
              phpcask_app,
-             phpcask_sup
+             phpcask_sup,
+             phpcask_control
             ]},
-  {registered, []},
+  {registered, [phpcask]},
   {applications, [
                   kernel,
                   stdlib
