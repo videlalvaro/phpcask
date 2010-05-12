@@ -1,6 +1,6 @@
 <?php
 
-require_once('./PHPCask.class.php');
+require_once('./doc/examples/PHPCask.class.php');
 
 $phpcask = new PHPCask('phpcask@localhost', $argv[1]);
 var_dump($phpcask->put("foo", "bar"));
