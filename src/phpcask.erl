@@ -9,6 +9,10 @@
 
 -export([get/1, put/2, delete/1, list_keys/0, merge/0]).
 
+-define(DEFAULT_DIR, "./priv/data").
+-define(EXPIRY_SECS, 900).
+
+
 start() -> gen_server:start({local, ?MODULE}, ?MODULE, [], []).
 start_link() -> gen_server:start_link({local, ?MODULE}, ?MODULE, [], []).
 stop()  -> gen_server:cast(?MODULE, stop).
@@ -67,7 +71,13 @@ terminate(_Reason, _State) -> ok.
 code_change(_OldVsn, State, _Extra) -> {ok, State}.
 
 get_dirname() ->
-  "./priv/data".
+  get_opt(dirname, ?DEFAULT_DIR).
 
 get_expiry_secs() ->
-  900.
+  get_opt(expiry_secs, ?EXPIRY_SECS).
+  
+get_opt(Key, Default) ->
+  case application:get_env(bitcask, Key) of
+      {ok, Value} -> Value;
+      undefined -> Default
+  end.
