@@ -41,5 +41,19 @@ class PHPCask
     return peb_decode($result);
   }
   
+  public function merge($expire)
+  {
+    $x = peb_encode("[~i]", array(array($expire)));
+    $result = peb_rpc("phpcask", "merge", $x, $this->link);
+    return peb_decode($result);
+  }
+  
+  public function close()
+  {
+    if(is_resource($this->link))
+    {
+      peb_close($this->link);
+    }
+  }
 }
 ?>
