@@ -17,10 +17,6 @@
   {env, [
         
         %% Default folder to store bitcask files.
-        {dirname, "./priv/data"},
-        
-        %% Expiration time in seconds for the session data.
-        {expiry_secs, 900}
-
+        {dirname, "./priv/data"}
         ]}
  ]}.
